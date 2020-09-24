@@ -6,8 +6,8 @@
   },
   "rules": {
     "@typescript-eslint/indent": ["error", 4],
-    "@typescript-eslint/strict-boolean-expressions": 0,
-    "strictNullChecks": 0
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "strictNullChecks": "off"
 
   }
 
