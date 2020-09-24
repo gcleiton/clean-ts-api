@@ -1,0 +1,12 @@
+{
+  "extends": "standard-with-typescript",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+
+  },
+  "rules": {
+    "@typescript-eslint/indent": ["error", 4],
+    "@typescript-eslint/strict-boolean-expressions": 0
+  }
+
+}
