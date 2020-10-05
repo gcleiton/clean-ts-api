@@ -50,7 +50,7 @@ describe('SignUpController', () => {
             body: {
                 name: 'any',
                 email: 'any_email@gmail.com',
-                password: 'any_password',
+                password: 'any_password'
                 // passwordConfirmation: 'any_password'
             }
         }
