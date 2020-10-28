@@ -1,8 +1,6 @@
 import { EmailValidator, AddAccount, AddAccountModel, AccountModel } from './signup-protocols'
 import { MissingParamError, InvalidParamError, ServerError } from './../../errors'
 import { SignUpController } from './signup'
-import { AccountModel } from './../../../domain/models/account'
-import { AddAccount, AddAccountModel } from './../../../domain/usecases/add-account'
 
 const makeEmailValidator = (): EmailValidator => {
     class EmailValidatorStub implements EmailValidator {
@@ -20,7 +18,7 @@ const makeAddAccount = (): AddAccount => {
             const fakeAccount = {
                 id: 'valid_id',
                 name: 'valid_name',
-                email: 'valid_email@mail.com',
+                email: 'valid_email@gmail.com',
                 password: 'valid_password'
             }
 
@@ -207,6 +205,26 @@ describe('SignUpController', () => {
             name: 'any',
             email: 'any_email@gmail.com',
             password: 'any_password'
+        })
+    })
+
+    test('Should return 200 if valid data is provided', () => {
+        const { sut } = makeSut()
+        const httpRequest = {
+            body: {
+                name: 'valid_name',
+                email: 'valid_email@gmail.com',
+                password: 'valid_password',
+                passwordConfirmation: 'valid_password'
+            }
+        }
+        const httpResponse = sut.handle(httpRequest)
+        expect(httpResponse.statusCode).toBe(200)
+        expect(httpResponse.body).toEqual({
+            id: 'valid_id',
+            name: 'valid_name',
+            email: 'valid_email@gmail.com',
+            password: 'valid_password'
         })
     })
 })
