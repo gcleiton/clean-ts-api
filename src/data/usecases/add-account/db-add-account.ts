@@ -3,7 +3,7 @@ import { AddAccount, AddAccountModel } from './../../../domain/usecases/add-acco
 import { Encrypter } from '../../protocols/encrypter'
 
 export class DbAddAccount implements AddAccount {
-    private encrypter: Encrypter
+    private readonly encrypter: Encrypter
 
     constructor (encrypter: Encrypter) {
         this.encrypter = encrypter
