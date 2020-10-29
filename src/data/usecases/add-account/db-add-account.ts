@@ -5,7 +5,7 @@ import { Encrypter } from '../../protocols/encrypter'
 export class DbAddAccount implements AddAccount {
     private encrypter: Encrypter
 
-    constructor (encrypter: Encrypter): void {
+    constructor (encrypter: Encrypter) {
         this.encrypter = encrypter
     }
 
