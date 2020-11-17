@@ -1,6 +1,5 @@
-import { HttpResponse } from './../../presentation/protocols/http';
-import { Controller, HttpRequest, HttpResponse } from "../../presentation/protocols";
-import { LogControllerDecorator } from "./log";
+import { Controller, HttpRequest, HttpResponse } from "../../presentation/protocols"
+import { LogControllerDecorator } from "./log"
 
 describe('LogController Decorator', () => {
     interface SutTypes {
