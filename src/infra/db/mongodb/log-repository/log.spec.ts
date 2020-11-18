@@ -21,7 +21,7 @@ describe('Log Mongo Repository', () => {
     afterAll(async () => {
         await MongoHelper.disconnect()
     })
-    
+
     test('Should create an error log on success', async () => {
         const sut = makeSut()
         await sut.logError('any_error')

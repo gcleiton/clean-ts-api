@@ -7,7 +7,7 @@ export class LogControllerDecorator implements Controller {
 
     constructor (controller: Controller, logErrorRepository: LogErrorRepository) {
         this.controller = controller
-        this.logErrorRepository = logErrorRepository 
+        this.logErrorRepository = logErrorRepository
     }
 
     async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
