@@ -9,7 +9,7 @@ import {
 
 export class DbAuthentication implements Authentication {
     constructor (
-        private readonly loadAccountByEmailRepository: LoadAccountByEmailRepository, 
+        private readonly loadAccountByEmailRepository: LoadAccountByEmailRepository,
         private readonly hashComparer: HashComparer,
         private readonly encrypterGenerator: Encrypter,
         private readonly updateAccessTokenRepository: UpdateAccessTokenRepository

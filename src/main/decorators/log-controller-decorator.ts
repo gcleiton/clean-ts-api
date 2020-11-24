@@ -3,7 +3,7 @@ import { Controller, HttpRequest, HttpResponse } from '../../presentation/protoc
 
 export class LogControllerDecorator implements Controller {
     constructor (
-        private readonly controller: Controller, 
+        private readonly controller: Controller,
         private readonly logErrorRepository: LogErrorRepository
     ) {}
 
