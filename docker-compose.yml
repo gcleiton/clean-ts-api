@@ -11,11 +11,13 @@ services:
   api: 
     container_name: api-container
     build: .
-    restart: always
     image: clean-node-api
+    restart: always
     command: npm start
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/clean-node-api
     volumes:
-      - ./dist:./usr/src/clean-node-api/dist
+      - ./dist:/usr/src/clean-node-api/dist
     ports:
       - "5050:5050"
     links:
