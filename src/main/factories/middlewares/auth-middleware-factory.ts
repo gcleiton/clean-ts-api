@@ -1,5 +1,5 @@
-import { makeDbLoadAccountByToken } from './../usecases/load-account-by-token/db-load-account-by-token-factory';
-import { Middleware } from '../../../../../presentation/protocols'
+import { makeDbLoadAccountByToken } from '../usecases/account/load-account-by-token/db-load-account-by-token-factory';
+import { Middleware } from '../../../presentation/protocols/middleware'
 import { AuthMiddleware } from '../../../presentation/midlewares/auth-middleware'
 
 export const makeAuthMiddleware = (role?: string): Middleware => {
