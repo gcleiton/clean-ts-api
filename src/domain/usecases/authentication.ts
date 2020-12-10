@@ -1,5 +1,5 @@
 export interface AuthenticationModel {
-    email: string,
+    email: string
     password: string
 }
 
